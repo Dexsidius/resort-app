@@ -14,7 +14,7 @@ import Navbar from './components/Navbar'
 
 // Importing Routing methods from router dom to allow for multi webpage application
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-import {Link} from 'react-router-dom'
+
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
               <Route exact path="/rooms/:crum" element={<SingleRoom/>} />
               <Route component={<Error/>} />
           </Routes>
-      </Router>,
+      </Router>
     </>
   );
 }

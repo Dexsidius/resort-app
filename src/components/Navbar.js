@@ -1,11 +1,29 @@
 import React, { Component } from 'react'
 
+// Importing Project Sample Logo and Icon
+import logo from '../images/logo.svg'
+import {FaAlignRight} from 'react-icons'
+import {Link} from 'react-router-dom'
+
+// Boilerplate for creating a component
 export default class Navbar extends Component {
+  state={
+    isOpen: false
+  }
+  handleToggle = () =>{
+    this.setState({isOpen:!this.state.isOpen})
+  }
   render() {
     return (
-      <div>
-        Hello from Navbar
-      </div>
+      <nav className="navbar">
+        <div className="nav-center">
+          <div class="nav-header">
+            <Link to="/">
+              <img src={logo} alt="Beach Resort"/>
+            </Link>
+          </div>
+        </div>
+      </nav>
     )
   }
 }
